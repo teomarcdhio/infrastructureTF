@@ -48,7 +48,7 @@ resource "azurerm_linux_virtual_machine" "artemisVMs" {
   size                  = "Standard_DS1_v2"
   network_interface_ids = [azurerm_network_interface.linuxNI[count.index].id]
   computer_name         = "artemisvm-${count.index}"
-  admin_username        = "testuser"
+  admin_username        = var.linuxuser
   
   source_image_reference {
     publisher = "Canonical"
@@ -58,7 +58,7 @@ resource "azurerm_linux_virtual_machine" "artemisVMs" {
   }
 
   admin_ssh_key {
-    username   = "testuser"
+    username   = var.linuxuser
     public_key = tls_private_key.test_ssh.public_key_openssh
   }
 

@@ -25,3 +25,7 @@ variable "winvmuser" {
 variable "winvmpass" {
   type = string
 }
+
+variable "linuxuser" {
+  type = string
+}
