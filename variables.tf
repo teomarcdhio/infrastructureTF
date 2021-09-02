@@ -29,3 +29,19 @@ variable "winvmpass" {
 variable "linuxuser" {
   type = string
 }
+
+variable "az_domain" {
+  type = string
+}
+
+variable "az_domain_username" {
+  type = string 
+}
+
+variable "az_domain_dc_1" {
+  type = string
+}
+
+variable "az_domain_password" {
+  type = string
+}
