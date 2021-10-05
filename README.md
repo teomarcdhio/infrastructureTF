@@ -1,6 +1,6 @@
 #Basic setup of an infrastrucre in Azure using Terraform
 
-Create a terrafomr.auto.tfvars and define the following:
+Create a terraform.auto.tfvars and define the following:
 ```
 location = "uksouth"
 resource_group = "resourcegroupname"
